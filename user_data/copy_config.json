@@ -1,0 +1,58 @@
+{
+  "// ===== Meow 扩展参数 ===== ": "下单金额比例控制，执行器本地参数",
+  "meow": {
+    "use_ratio": true,
+    "amount_ratio": 1.0,
+    "position_mode": "oneway",
+    "allow_entry_long": true,
+    "allow_entry_short": true,
+    "allow_exit_long": true,
+    "allow_exit_short": true
+  },
+  
+  "// ===== 交易模式配置 ===== ": "注释：交易模式和杠杆设置",
+  "dry_run": true,
+  "dry_run_wallet": 10000,
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "can_short": true,
+  "leverage": 1.0,
+
+  "// ===== 资金管理 ===== ": "注释：资金和仓位管理",
+  "stake_currency": "USDT",
+  "stake_amount": 10,
+  "max_open_trades": 100,
+  "tradable_balance_ratio": 1,
+
+  "// ===== 风险管理 ===== ": "注释：止损和风险管理",
+  "ignore_roi_if_entry_signal": false,
+  "use_exit_signal": true,
+  "exit_profit_only": false,
+  "exit_profit_offset": 0.0,
+  "stoploss": -0.99,
+  "trailing_stop": false,
+  "minimal_roi": {},
+
+  "// ===== 交易所配置 ===== ": "注释：交易所连接和交易对设置",
+  "exchange": {
+    "pair_whitelist": [
+      "ETH/USDT:USDT"
+    ],
+    "pair_blacklist": ["TRUMP/USDT:USDT"],
+      "ccxt_config": {
+      "enableRateLimit": true,
+      "rateLimit": 1000
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "rateLimit": 1000
+    }
+  },
+
+  "// ===== 交易对列表 ===== ": "注释：交易对筛选策略",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ]
+}

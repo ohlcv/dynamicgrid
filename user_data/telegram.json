@@ -1,0 +1,49 @@
+{
+    "// ===== Telegram通知 ===== ": "注释：Telegram机器人通知",
+    "telegram": {
+        "enabled": true,
+        "token": "你的telegram_token",
+        "chat_id": "你的telegram_chat_id",
+        
+        "keyboard": [
+            ["/daily", "/stats", "/balance", "/profit"],
+            ["/status table", "/performance"],
+            ["/reload_config", "/count", "/logs"]
+        ],
+        
+        "notification_settings": {
+            "startup": "on",
+            "status": "off",
+            "warning": "on",
+            "entry": "silent",
+            "entry_fill": "on",
+            "entry_cancel": "silent",
+            "exit": {
+                "stop_loss": "on",
+                "emergency_exit": "on",
+                "force_exit": "on",
+                "trailing_stop_loss": "on",
+                "stoploss_on_exchange": "on",
+                "roi": "silent",
+                "exit_signal": "silent",
+                "custom_exit": "silent",
+                "partial_exit": "on",
+                "*": "silent"
+            },
+            "exit_fill": "on",
+            "exit_cancel": "silent",
+            "protection_trigger": "off",
+            "protection_trigger_global": "on",
+            "strategy_msg": "off",
+            "show_candle": "off"
+        },
+        
+        "authorized_users": ["123456789"],
+        
+        "topic_id": "",
+        
+        "allow_custom_messages": true,
+        "reload": true,
+        "balance_dust_level": 0.01
+    }
+}

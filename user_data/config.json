@@ -1,0 +1,81 @@
+{
+  "// ===== 基础配置 ===== ": "注释：机器人基础设置",
+  "initial_state": "running",
+  "user_data_dir": "user_data",
+  "dataformat_trades": "json",
+  "fiat_display_currency": "USD",
+
+  "// ===== 策略配置 ===== ": "注释：DynamicGrid策略设置",
+  "strategy": "DynamicGridStrategy",
+  "recursive_strategy_search": true,
+  "position_adjustment_enable": true,
+  "force_entry_enable": true,
+  
+  "// ===== 配置，数据库和日志 ===== ": "注释：数据存储和日志记录",
+  "add_config_files": ["copy_config.json", "strategy_config.json", "auth.json", "telegram.json"],
+  "db_url": "sqlite:///user_data/tradesv3.freqtrade.sqlite",
+  "logfile": "user_data/logs/freqtrade.log",
+
+  "// ===== 时间框架 ===== ": "注释：K线时间框架",
+  "timeframe": "1m",
+  "startup_candle_count": 20,
+  "process_only_new_candles": true,
+
+  "// ===== 订单配置 ===== ": "注释：订单类型和超时设置",
+  "order_types": {
+    "entry": "market",
+    "exit": "market",
+    "emergency_exit": "market",
+    "force_entry": "market",
+    "force_exit": "market",
+    "stoploss": "market",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+  "unfilledtimeout": {
+    "unit": "minutes",
+    "entry": 10,
+    "exit": 30
+  },
+  "cancel_open_orders_on_exit": false,
+
+  "// ===== 价格配置 ===== ": "注释：入场和出场价格策略",
+  "entry_pricing": {
+    "price_side": "other",
+    "ask_last_balance": 0,
+    "use_order_book": true,
+    "order_book_top": 1,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+
+  "// ===== 数据处理 ===== ": "注释：数据验证和处理",
+  "disable_dataframe_checks": false,
+  "reduce_df_footprint": false,
+
+  "// ===== Edge模块 ===== ": "注释：Edge动态止损模块",
+  "edge": {
+    "enabled": false,
+    "process_throttle_secs": 3600,
+    "calculate_since_number_of_days": 7,
+    "allowed_risk": 0.01,
+    "minimum_winrate": 0.6,
+    "minimum_expectancy": 0.2,
+    "min_trade_number": 10,
+    "max_trade_duration_minute": 1440,
+    "remove_pumps": false
+  },
+
+  "// ===== 内部设置 ===== ": "注释：机器人内部运行参数",
+  "internals": {
+    "process_throttle_secs": 5,
+    "heartbeat_interval": 60
+  }
+}
