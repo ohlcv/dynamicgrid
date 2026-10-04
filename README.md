@@ -349,6 +349,6 @@ for event in outbound_events:
 - [DynamicGrid设计说明.md](./DynamicGrid设计说明.md) - 技术设计文档
 - [DynamicGrid配置说明.md](./DynamicGrid配置说明.md) - 配置参数说明
 
-同行是战友不是敌人，代码开源我的GitHub上了，同道中人砥砺前行，苟富贵莫相忘。
+同行是战友不是敌人，同道中人砥砺前行，苟富贵莫相忘。
 相关文章链接：https://www.meowsite.cn/zh/blog/%e9%a1%b9%e7%9b%ae%e5%ae%9e%e8%b7%b5/%e7%bc%a0%e8%ae%ba%e9%87%8f%e5%8c%96%e4%ba%a4%e6%98%93%e7%b3%bb%e7%bb%9f%e8%bf%9b%e5%ba%a6%e6%8a%a5%e5%91%8a/
 
